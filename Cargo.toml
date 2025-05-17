@@ -4,14 +4,14 @@ members = [
     # CORE
     "core/*",
     # FFI
-    "ffi/*",
+    #"ffi/*",
     # TESTS
-    "tests/*",
+    #"tests/*",
     # TOOLS
-    "tools/*",
+    #"tools/*",
     # OTHERS
-    "examples",
-    "cli",
+    #"examples",
+    #"cli",
     # UTILS
     "utils/*",
 ]
@@ -76,7 +76,7 @@ thin-vec = "0.2.14"
 time = { version = "0.3.41", default-features = false, features = [
     "local-offset",
     "large-dates",
-    "wasm-bindgen",
+    #"wasm-bindgen",
     "parsing",
     "formatting",
     "macros",
@@ -91,10 +91,12 @@ color-eyre = "0.6.3"
 comfy-table = "7.1.4"
 serde_repr = "0.1.20"
 bus = "2.4.1"
-wasm-bindgen = { version = "0.2.97", default-features = false }
-getrandom = { version = "0.3.3", default-features = false }
+#wasm-bindgen = { version = "0.2.97", default-features = false }
+#getrandom = { version = "0.3.3", default-features = false }
+getrandom = {package = "getrandom", version = "0.2", default-features = false, features = ["custom"] }
+rand08 = {package = "rand", version = "0.8"}
 console_error_panic_hook = "0.1.7"
-wasm-bindgen-test = "0.3.47"
+#wasm-bindgen-test = "0.3.47"
 smol = "2.0.2"
 isahc = "1.7.2"
 rustyline = { version = "15.0.0", default-features = false }
@@ -105,7 +107,9 @@ proc-macro2 = "1.0"
 synstructure = "0.13"
 measureme = "12.0.1"
 paste = "1.0"
-rand = "0.9.1"
+#rand = "0.9.1"
+#rand = "0.9"
+#rand_core = { version = "0.9", features = ["os_rng"] }
 num-integer = "0.1.46"
 ryu-js = "1.0.2"
 tap = "1.0.1"
